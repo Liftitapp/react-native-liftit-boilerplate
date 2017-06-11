@@ -1,0 +1,3 @@
+rootProject.name = 'ReactNativeLiftitBoilerplate'
+
+include ':app'
