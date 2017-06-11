@@ -1,4 +1,4 @@
-import '../Config'
+import '../config'
 import DebugConfig from '../config/debug_config'
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
