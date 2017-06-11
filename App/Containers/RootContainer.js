@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { View, StatusBar } from 'react-native'
-import Navigation from '../Navigation/AppNavigation'
+import Navigation from '../navigation/app_navigation'
 import { connect } from 'react-redux'
-import StartupActions from '../Redux/StartupRedux'
-import ReduxPersist from '../Config/ReduxPersist'
+import StartupActions from '../redux/startup_redux'
+import ReduxPersist from '../config/redux_persist'
 
 // Styles
-import styles from './Styles/RootContainerStyles'
+import styles from './styles/root_container_styles'
 
 class RootContainer extends Component {
   componentDidMount () {

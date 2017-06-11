@@ -1,19 +1,19 @@
 import { takeLatest } from 'redux-saga/effects'
-import API from '../Services/Api'
-import FixtureAPI from '../Services/FixtureApi'
-import DebugConfig from '../Config/DebugConfig'
+import API from '../services/api'
+import FixtureAPI from '../services/fixture_api'
+import DebugConfig from '../config/debug_config'
 
 /* ------------- Types ------------- */
 
-import { StartupTypes } from '../Redux/StartupRedux'
-import { GithubTypes } from '../Redux/GithubRedux'
-import { LoginTypes } from '../Redux/LoginRedux'
+import { StartupTypes } from '../redux/startup_redux'
+import { GithubTypes } from '../redux/github_redux'
+import { LoginTypes } from '../redux/login_redux'
 
 /* ------------- Sagas ------------- */
 
-import { startup } from './StartupSagas'
-import { login } from './LoginSagas'
-import { getUserAvatar } from './GithubSagas'
+import { startup } from './startup_sagas'
+import { login } from './login_sagas'
+import { getUserAvatar } from './github_sagas'
 
 /* ------------- API ------------- */
 

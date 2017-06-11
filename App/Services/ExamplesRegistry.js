@@ -1,8 +1,8 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import R from 'ramda'
-import { ApplicationStyles } from '../Themes'
-import DebugConfig from '../Config/DebugConfig'
+import { ApplicationStyles } from '../themes'
+import DebugConfig from '../config/debug_config'
 let globalComponentExamplesRegistry = []
 let globalPluginExamplesRegistry = []
 

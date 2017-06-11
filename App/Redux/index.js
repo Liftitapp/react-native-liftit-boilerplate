@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import configureStore from './CreateStore'
-import rootSaga from '../Sagas/'
+import configureStore from './create_store'
+import rootSaga from '../sagas/'
 
 export default () => {
   /* ------------- Assemble The Reducers ------------- */

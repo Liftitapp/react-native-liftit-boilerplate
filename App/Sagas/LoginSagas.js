@@ -1,5 +1,5 @@
 import { put } from 'redux-saga/effects'
-import LoginActions from '../Redux/LoginRedux'
+import LoginActions from '../redux/login_redux'
 
 // attempts to login
 export function * login ({ username, password }) {

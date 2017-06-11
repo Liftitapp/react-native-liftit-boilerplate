@@ -10,9 +10,9 @@ import {
   LayoutAnimation
 } from 'react-native'
 import { connect } from 'react-redux'
-import styles from './Styles/LoginScreenStyles'
-import { Images, Metrics } from '../Themes'
-import LoginActions from '../Redux/LoginRedux'
+import styles from './styles/login_screen_styles'
+import { Images, Metrics } from '../themes'
+import LoginActions from '../redux/login_redux'
 
 class LoginScreen extends React.Component {
   static propTypes = {

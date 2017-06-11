@@ -1,0 +1,1 @@
+for file in $(find . -type f -name '*.js'); do ./fix-imports.rb $file; done
