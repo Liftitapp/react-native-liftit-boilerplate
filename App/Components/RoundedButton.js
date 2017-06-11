@@ -12,7 +12,6 @@ import ExamplesRegistry from '../Services/ExamplesRegistry'
 ExamplesRegistry.addComponentExample('Rounded Button', () =>
   <RoundedButton
     text='real buttons have curves'
-    onPress={() => window.alert('Rounded Button Pressed!')}
   />
 )
 
