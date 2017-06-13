@@ -75,15 +75,15 @@
   },
   "jest": {
     "testMatch": [
-      "**/Tests/**/*.js",
+      "**/tests/**/*.js",
       "**/?(*.)(spec|test).js?(x)"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "Tests/Setup.js"
+      "tests/setup.js"
     ],
     "setupFiles": [
-      "./Tests/Setup"
+      "./tests/setup"
     ],
     "preset": "react-native"
   },
