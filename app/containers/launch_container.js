@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-// Actions  ====================================================================
 
 // Components ==================================================================
 import LaunchPanel from './../components/launch_panel'

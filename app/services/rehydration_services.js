@@ -6,7 +6,6 @@ import DebugConfig from '../config/debug_config'
 const updateReducers = (store: Object) => {
   const reducerVersion = ReduxPersist.reducerVersion
   const config = ReduxPersist.storeConfig
-  // const startup = () => store.dispatch(StartupActions.startup())
 
   // Check to ensure latest reducer version
   AsyncStorage.getItem('reducerVersion')
@@ -24,16 +23,13 @@ const updateReducers = (store: Object) => {
           })
         }
         // Purge store
-        // persistStore(store, config, startup).purge()
         persistStore(store, config).purge()
         AsyncStorage.setItem('reducerVersion', reducerVersion)
       } else {
-        // persistStore(store, config, startup)
         persistStore(store, config)
       }
     })
     .catch(() => {
-      // persistStore(store, config, startup)
       persistStore(store, config)
       AsyncStorage.setItem('reducerVersion', reducerVersion)
     })
