@@ -1,7 +1,7 @@
 import { StackNavigator } from 'react-navigation'
-import LaunchScreen from '../screens/launch_screen'
+import LaunchScreen from 'app/screens/launch_screen'
 
-import styles from './navigation_styles'
+import styles from 'app/navigation/navigation_styles'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({

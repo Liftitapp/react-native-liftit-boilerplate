@@ -1,7 +1,7 @@
-import Colors from './colors'
-import Fonts from './fonts'
-import Metrics from './metrics'
-import Images from './images'
-import ApplicationStyles from './application_styles'
+import Colors from 'app/themes/colors'
+import Fonts from 'app/themes/fonts'
+import Metrics from 'app/themes/metrics'
+import Images from 'app/themes/images'
+import ApplicationStyles from 'app/themes/application_styles'
 
 export { Colors, Fonts, Images, Metrics, ApplicationStyles }

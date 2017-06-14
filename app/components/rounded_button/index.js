@@ -1,3 +1,3 @@
-import RoundedButton from './rounded_button'
+import RoundedButton from 'app/components/rounded_button/rounded_button'
 
 export default RoundedButton

@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components ==================================================================
-import LaunchContainer from './../containers/launch_container'
+import LaunchContainer from 'app/containers/launch_container'
 
 const LaunchScreen = () => (<LaunchContainer />)
 export default LaunchScreen

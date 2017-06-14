@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
-import configureStore from './create_store'
-import rootSaga from '../sagas/'
-import { reducer as GithubReducer } from './github_redux'
+import configureStore from 'app/redux/create_store'
+import rootSaga from 'app/sagas/'
+import { reducer as GithubReducer } from 'app/redux/github_redux'
 
 export default () => {
   /* ------------- Assemble The Reducers ------------- */

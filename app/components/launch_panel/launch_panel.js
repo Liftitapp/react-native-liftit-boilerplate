@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
-import { Images } from './../../themes'
-import RoundedButton from './../rounded_button'
+import { Images } from 'app/themes'
+import RoundedButton from 'app/components/rounded_button'
 
 // Styles
 import styles from './launch_panel_styles'

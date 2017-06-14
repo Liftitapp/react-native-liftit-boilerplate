@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 // Components ==================================================================
-import LaunchPanel from './../components/launch_panel'
+import LaunchPanel from 'app/components/launch_panel'
 
 const mapStateToProps = state => ({
   text: 'text_from_container'

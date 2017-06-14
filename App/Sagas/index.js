@@ -1,15 +1,15 @@
 import { takeLatest } from 'redux-saga/effects'
-import API from '../services/api'
-import FixtureAPI from '../services/fixture_api'
-import DebugConfig from '../config/debug_config'
+import API from 'app/services/api'
+import FixtureAPI from 'app/services/fixture_api'
+import DebugConfig from 'app/config/debug_config'
 
 /* ------------- Types ------------- */
 
-import { GithubTypes } from '../redux/github_redux'
+import { GithubTypes } from 'app/redux/github_redux'
 
 /* ------------- Sagas ------------- */
 
-import { getUserAvatar } from './github_sagas'
+import { getUserAvatar } from 'app/sagas/github_sagas'
 
 /* ------------- API ------------- */
 
