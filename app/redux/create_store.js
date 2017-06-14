@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import { autoRehydrate } from 'redux-persist'
-import Config from '../config/debug_config'
+import Config from 'app/config/debug_config'
 import createSagaMiddleware from 'redux-saga'
-import RehydrationServices from '../services/rehydration_services'
-import ReduxPersist from '../config/redux_persist'
+import RehydrationServices from 'app/services/rehydration_services'
+import ReduxPersist from 'app/config/redux_persist'
 
 // creates the store
 export default (rootReducer, rootSaga) => {

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { Fonts, Colors, Metrics } from '../../themes/'
+import { Fonts, Colors, Metrics } from 'app/themes/'
 
 export default StyleSheet.create({
   button: {

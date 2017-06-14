@@ -1,6 +1,6 @@
-import Fonts from './fonts'
-import Metrics from './metrics'
-import Colors from './colors'
+import Fonts from 'app/themes/fonts'
+import Metrics from 'app/themes/metrics'
+import Colors from 'app/themes/colors'
 
 // This file is for a reusable grouping of Theme items.
 // Similar to an XML fragment layout in Android
