@@ -1,6 +1,6 @@
 import 'react-native'
 import React from 'react'
-import RoundedButton from '../../app/components/rounded_button'
+import RoundedButton from 'app/components/rounded_button'
 import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
 

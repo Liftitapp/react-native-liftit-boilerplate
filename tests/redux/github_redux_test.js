@@ -1,4 +1,4 @@
-import Actions, { reducer, INITIAL_STATE } from '../../app/redux/github_redux'
+import Actions, { reducer, INITIAL_STATE } from 'app/redux/github_redux'
 
 test('request', () => {
   const username = 'taco'
