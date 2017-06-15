@@ -1,4 +1,5 @@
 apply plugin: "com.android.application"
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 import com.android.build.OutputFile
 
@@ -90,8 +91,8 @@ android {
         applicationId "com.reactnativeliftitboilerplate"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
+        versionCode Integer.parseInt(project.env.get("APP_VERSION_CODE"))
+        versionName project.env.get("APP_VERSION_NAME")
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -126,6 +127,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-config')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
