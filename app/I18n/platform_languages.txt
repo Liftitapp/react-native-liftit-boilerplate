@@ -1,0 +1,10 @@
+Android:                                iOS:
+--------------                          -------------
+
+English (US)            en-US           English                 en
+English (AU)            en-AU           English (Australian)    en-AU
+English (UK)            en-GB           English (British)       en-GB
+                                        English (Canadian)      en-CA
+                                        English (Indian)        en-IN
+Spanish (Latin America) es-419          Spanish (Mexico)        es-M
+Spanish (Spain)         es-ES           Spanish                 es
