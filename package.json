@@ -10,7 +10,7 @@
     "install:eslint": "npm i --save-dev babel-eslint eslint eslint-config-standard eslint-config-standard-react-native eslint-plugin-babel eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-react eslint-plugin-react-native eslint-plugin-standard",
     "fixcode": "standard --fix",
     "clean:windows": "rmdir /S node_modules && watchman watch-del-all && npm cache clean --force && npm install",
-    "test": "jest",
+    "test": "jest --updateSnapshot",
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
     "clean:android": "cd android/ && ./gradlew clean && cd .. && react-native run-android",
     "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build && rm -rf node_modules/ && npm cache clean && npm i",
