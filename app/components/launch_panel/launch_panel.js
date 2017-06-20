@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import { Images } from 'app/themes'
 import RoundedButton from 'app/components/rounded_button'
+import Config from 'react-native-config'
 
 // Styles
 import styles from './launch_panel_styles'
@@ -24,6 +25,9 @@ const launchPanel = ({
         </Text>
         <Text style={styles.sectionText}>
           Made with ❤️ by Liftit
+        </Text>
+        <Text style={styles.sectionText}>
+          Código: { Config.APP_VERSION_CODE } - v{ Config.APP_VERSION_NAME }
         </Text>
       </View>
 
