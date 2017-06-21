@@ -1,6 +1,5 @@
 import { CalcScreenHeight, CalcScreenWidth, CalcPlatform } from 'app/themes'
-import { Dimensions, Platform } from 'react-native'
-import R from 'ramda'
+import { Dimensions } from 'react-native'
 
 const { width, height } = Dimensions.get('window')
 
@@ -21,9 +20,9 @@ test('ScreenHeight with height largest than width must be height', () => {
 })
 
 test('Platform == ios', () => {
-  expect(CalcPlatform({OS: 'ios'})).toBe(64)
+  expect(CalcPlatform({ OS: 'ios' })).toBe(64)
 })
 
 test('Platform == android', () => {
-  expect(CalcPlatform({OS: 'android'})).toBe(54)
+  expect(CalcPlatform({ OS: 'android' })).toBe(54)
 })
