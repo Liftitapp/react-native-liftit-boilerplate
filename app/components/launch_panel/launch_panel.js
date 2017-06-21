@@ -3,9 +3,10 @@ import { ScrollView, Text, Image, View } from 'react-native'
 import { Images } from 'app/themes'
 import RoundedButton from 'app/components/rounded_button'
 import Config from 'react-native-config'
+import I18n from 'app/i18n'
 
 // Styles
-import styles from './launch_panel_styles'
+import styles from 'app/components/launch_panel/launch_panel_styles'
 
 const launchPanel = ({
   text
@@ -28,6 +29,9 @@ const launchPanel = ({
         </Text>
         <Text style={styles.sectionText}>
           Código: { Config.APP_VERSION_CODE } - v{ Config.APP_VERSION_NAME }
+        </Text>
+        <Text style={styles.sectionText}>
+          Ejemplo i18n: { I18n.t('greetings') }
         </Text>
       </View>
 

@@ -7,7 +7,7 @@ I18n.fallbacks = true
 
 // English language is the main language for fall back:
 I18n.translations = {
-  en: require('./languages/en.json')
+  en: require('app/i18n/languages/en.json')
 }
 
 let languageCode = I18n.locale.substr(0, 2)
@@ -15,7 +15,7 @@ let languageCode = I18n.locale.substr(0, 2)
 // All other translations for the app goes to the respective language file:
 switch (languageCode) {
   case 'es':
-    I18n.translations.es = require('./languages/es.json')
+    I18n.translations.es = require('app/i18n/languages/es.json')
     break
 }
 
