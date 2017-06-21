@@ -88,11 +88,7 @@
       "./tests/setup"
     ],
     "preset": "react-native",
-    "collectCoverage": true,
-    "coverageFormats": [
-      "json",
-      "html"
-    ]
+    "collectCoverage": true
   },
   "config": {}
 }

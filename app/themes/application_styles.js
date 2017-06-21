@@ -1,5 +1,5 @@
 import Fonts from 'app/themes/fonts'
-import Metrics from 'app/themes/metrics'
+import { Metrics } from 'app/themes/metrics'
 import Colors from 'app/themes/colors'
 
 // This file is for a reusable grouping of Theme items.

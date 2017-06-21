@@ -2,8 +2,12 @@ import { Dimensions, Platform } from 'react-native'
 
 const { width, height } = Dimensions.get('window')
 
+const CalcScreenWidth = (_width = width, _height = height) => _width < _height ? _width : _height
+const CalcScreenHeight = (_width = width, _height = height) => _width < _height ? _height : _width
+const CalcPlatform = (_Platform = Platform) => _Platform.OS === 'ios' ? 64 : 54
+
 // Used via Metrics.baseMargin
-const metrics = {
+const Metrics = {
   marginHorizontal: 10,
   marginVertical: 10,
   section: 25,
@@ -13,9 +17,9 @@ const metrics = {
   doubleSection: 50,
   horizontalLineHeight: 1,
   searchBarHeight: 30,
-  screenWidth: width < height ? width : height,
-  screenHeight: width < height ? height : width,
-  navBarHeight: Platform.OS === 'ios' ? 64 : 54,
+  screenWidth: CalcScreenWidth(),
+  screenHeight: CalcScreenHeight(),
+  navBarHeight: CalcPlatform(),
   buttonRadius: 4,
   icons: {
     tiny: 15,
@@ -32,4 +36,4 @@ const metrics = {
   }
 }
 
-export default metrics
+export { Metrics, CalcScreenWidth, CalcScreenHeight, CalcPlatform }
