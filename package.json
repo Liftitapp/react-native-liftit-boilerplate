@@ -89,7 +89,10 @@
     ],
     "preset": "react-native",
     "collectCoverage": true,
-    "coverageFormats": ["json", "html"]
+    "coverageFormats": [
+      "json",
+      "html"
+    ]
   },
   "config": {}
 }

@@ -20,7 +20,7 @@ const launchPanel = ({
 
       <View style={styles.section} >
         <Image source={Images.ready} />
-        <RoundedButton text={text} />
+        <RoundedButton text={text} onPress={alertMessage} />
         <Text style={styles.sectionText}>
           🔥reactnative-steroids-boilerplate🔥
         </Text>
@@ -38,6 +38,10 @@ const launchPanel = ({
     </ScrollView>
   </View>
 )
+
+const alertMessage = () => {
+  window.alert('Rounded Button Pressed!')
+}
 
 launchPanel.propTypes = {
   text: PropTypes.string
