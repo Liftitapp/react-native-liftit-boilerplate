@@ -87,7 +87,9 @@
     "setupFiles": [
       "./tests/setup"
     ],
-    "preset": "react-native"
+    "preset": "react-native",
+    "collectCoverage": true,
+    "coverageFormats": ["json", "html"]
   },
   "config": {}
 }
