@@ -4,7 +4,7 @@ const { width, height } = Dimensions.get('window')
 
 const CalcScreenWidth = (_width = width, _height = height) => _width < _height ? _width : _height
 const CalcScreenHeight = (_width = width, _height = height) => _width < _height ? _height : _width
-const CalcPlatform = (_Platform = Platform) => _Platform.OS === 'ios' ? 64 : 54
+const CalcNavBarHeight = (_Platform = Platform) => _Platform.OS === 'ios' ? 64 : 54
 
 // Used via Metrics.baseMargin
 const Metrics = {
@@ -19,7 +19,7 @@ const Metrics = {
   searchBarHeight: 30,
   screenWidth: CalcScreenWidth(),
   screenHeight: CalcScreenHeight(),
-  navBarHeight: CalcPlatform(),
+  navBarHeight: CalcNavBarHeight(),
   buttonRadius: 4,
   icons: {
     tiny: 15,
@@ -36,4 +36,4 @@ const Metrics = {
   }
 }
 
-export { Metrics, CalcScreenWidth, CalcScreenHeight, CalcPlatform }
+export { Metrics, CalcScreenWidth, CalcScreenHeight, CalcNavBarHeight }

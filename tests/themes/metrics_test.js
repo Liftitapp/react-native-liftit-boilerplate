@@ -1,7 +1,6 @@
 import { CalcScreenHeight, CalcScreenWidth, CalcPlatform } from 'app/themes'
-import { Dimensions } from 'react-native'
 
-const { width, height } = Dimensions.get('window')
+const [width, height] = [1, 2]
 
 test('ScreenWidth with height largest than width must be width', () => {
   expect(CalcScreenWidth(width, height)).toBe(width)
