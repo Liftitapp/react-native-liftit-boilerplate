@@ -1,4 +1,4 @@
-import { CalcScreenHeight, CalcScreenWidth, CalcPlatform } from 'app/themes'
+import { CalcScreenHeight, CalcScreenWidth, CalcNavBarHeight } from 'app/themes'
 
 const [width, height] = [1, 2]
 
@@ -19,9 +19,9 @@ test('ScreenHeight with height largest than width must be height', () => {
 })
 
 test('Platform == ios', () => {
-  expect(CalcPlatform({ OS: 'ios' })).toBe(64)
+  expect(CalcNavBarHeight({ OS: 'ios' })).toBe(64)
 })
 
 test('Platform == android', () => {
-  expect(CalcPlatform({ OS: 'android' })).toBe(54)
+  expect(CalcNavBarHeight({ OS: 'android' })).toBe(54)
 })
