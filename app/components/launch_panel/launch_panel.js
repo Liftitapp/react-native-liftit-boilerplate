@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import { ScrollView, Text, Image, View, Alert } from 'react-native'
 import { Images } from 'app/themes'
 import RoundedButton from 'app/components/rounded_button'
 import Config from 'react-native-config'
@@ -40,7 +40,15 @@ const launchPanel = ({
 )
 
 const alertMessage = () => {
-  window.alert('Rounded Button Pressed!')
+  Alert.alert(
+    'Alert Title',
+    'My Alert Msg',
+    [
+      { text: 'Ask me later', onPress: () => console.log('Ask me later pressed') },
+      { text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
+      { text: 'OK', onPress: () => console.log('OK Pressed') }
+    ]
+  )
 }
 
 launchPanel.propTypes = {
