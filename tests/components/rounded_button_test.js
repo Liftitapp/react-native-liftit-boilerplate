@@ -5,12 +5,7 @@ import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
 
 test('RoundedButton component renders correctly', () => {
-  const tree = renderer.create(<RoundedButton onPress={() => {}} text='howdy' />).toJSON()
-  expect(tree).toMatchSnapshot()
-})
-
-test('RoundedButton component with children renders correctly', () => {
-  const tree = renderer.create(<RoundedButton onPress={() => {}}>Howdy</RoundedButton>).toJSON()
+  const tree = renderer.create(<RoundedButton text='howdy' />).toJSON()
   expect(tree).toMatchSnapshot()
 })
 

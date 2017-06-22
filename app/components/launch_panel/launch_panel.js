@@ -1,11 +1,12 @@
 import React, { PropTypes } from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import { ScrollView, Text, Image, View, Alert } from 'react-native'
 import { Images } from 'app/themes'
 import RoundedButton from 'app/components/rounded_button'
 import Config from 'react-native-config'
+import I18n from 'app/i18n'
 
 // Styles
-import styles from './launch_panel_styles'
+import styles from 'app/components/launch_panel/launch_panel_styles'
 
 const launchPanel = ({
   text
@@ -19,7 +20,7 @@ const launchPanel = ({
 
       <View style={styles.section} >
         <Image source={Images.ready} />
-        <RoundedButton text={text} />
+        <RoundedButton text={text} onPress={alertMessage} />
         <Text style={styles.sectionText}>
           🔥reactnative-steroids-boilerplate🔥
         </Text>
@@ -29,11 +30,26 @@ const launchPanel = ({
         <Text style={styles.sectionText}>
           Código: { Config.APP_VERSION_CODE } - v{ Config.APP_VERSION_NAME }
         </Text>
+        <Text style={styles.sectionText}>
+          Ejemplo i18n: { I18n.t('greetings') }
+        </Text>
       </View>
 
     </ScrollView>
   </View>
 )
+
+const alertMessage = () => {
+  Alert.alert(
+    'Alert Title',
+    'My Alert Msg',
+    [
+      { text: 'Ask me later', onPress: () => console.log('Ask me later pressed') },
+      { text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
+      { text: 'OK', onPress: () => console.log('OK Pressed') }
+    ]
+  )
+}
 
 launchPanel.propTypes = {
   text: PropTypes.string

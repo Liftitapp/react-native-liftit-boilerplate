@@ -29,7 +29,10 @@
     "__DEV__": false,
     "__TEST__": false,
     "__PROD__": false,
-    "__COVERAGE__": false
+    "__COVERAGE__": false,
+    "jest": false,
+    "test": false,
+    "expect": false
   },
   /*# http://eslint.org/docs/rules/*/
   "rules": {
