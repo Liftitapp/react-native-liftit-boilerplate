@@ -10,7 +10,8 @@
     "install:eslint": "npm i --save-dev babel-eslint eslint eslint-config-standard eslint-config-standard-react-native eslint-plugin-babel eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-react eslint-plugin-react-native eslint-plugin-standard",
     "fixcode": "standard --fix",
     "clean:windows": "rmdir /S node_modules && watchman watch-del-all && npm cache clean --force && npm install",
-    "test": "jest --updateSnapshot",
+    "test": "jest --coverage --updateSnapshot",
+    "gulp": "gulp",
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
     "clean:android": "cd android/ && ./gradlew clean && cd .. && react-native run-android",
     "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build && rm -rf node_modules/ && npm cache clean && npm i",
@@ -52,6 +53,7 @@
     "babel-jest": "20.0.3",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react-native": "1.9.2",
+    "dotenv": "^4.0.0",
     "enzyme": "^2.6.0",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
@@ -63,6 +65,8 @@
     "eslint-plugin-react": "^7.0.1",
     "eslint-plugin-react-native": "^2.3.2",
     "eslint-plugin-standard": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-codacy": "^1.0.0",
     "husky": "^0.13.1",
     "ignite-i18n": "^1.0.0",
     "ignite-ir-boilerplate": "^2.0.0-rc.6",
@@ -88,7 +92,15 @@
       "./tests/setup"
     ],
     "preset": "react-native",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
   },
   "config": {}
 }
