@@ -26,7 +26,7 @@
     "precommit": "npm run git-hook",
     "prepush": "npm run git-hook",
     "git-hook": "npm test -s",
-    "storybook": "storybook start -p 7007"
+    "storybook": "adb reverse tcp:7007 tcp:7007 && storybook start -p 7007"
   },
   "dependencies": {
     "apisauce": "^0.10.0",
