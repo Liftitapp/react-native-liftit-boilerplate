@@ -27,7 +27,9 @@
     "precommit": "npm run git-hook",
     "prepush": "npm run git-hook",
     "git-hook": "npm test -s",
-    "storybook": "adb reverse tcp:7007 tcp:7007 && storybook start -p 7007"
+    "storybook": "adb reverse tcp:7007 tcp:7007 && storybook start -p 7007",
+    "flow": "flow",
+    "flow-restart": "flow stop && flow start && flow"
   },
   "dependencies": {
     "apisauce": "^0.10.0",
@@ -68,6 +70,7 @@
     "eslint-plugin-react": "^7.0.1",
     "eslint-plugin-react-native": "^2.3.2",
     "eslint-plugin-standard": "^3.0.1",
+    "flow-bin": "^0.48.0",
     "gulp": "^3.9.1",
     "gulp-codacy": "^1.0.0",
     "husky": "^0.13.1",
