@@ -54,3 +54,5 @@ fastlane/screenshots
 
 .env
 coverage
+jest_0
+tests/components/__snapshots__
