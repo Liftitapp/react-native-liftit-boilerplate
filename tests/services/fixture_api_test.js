@@ -58,7 +58,7 @@ test('API Service expose three public methods and this returns a defined object'
   expect(R.hasIn('getRate', realAPI)).toEqual(true)
   expect(R.hasIn('getUser', realAPI)).toEqual(true)
 
-  //Modify this lines to test your API endpoints instead of Github API endpoints
+  // Modify this lines to test your API endpoints instead of Github API endpoints
   expect(realAPI.getRoot()).toBeDefined()
   expect(realAPI.getRate()).toBeDefined()
   expect(realAPI.getUser('qavor')).toBeDefined()
