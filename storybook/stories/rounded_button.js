@@ -1,9 +1,9 @@
 import React from 'react'
 import { Alert } from 'react-native'
 import { storiesOf } from '@storybook/react-native'
-import CenteredView from 'root/storybook/stories/centered_view'
-import RoundedButton from 'root/app/components/rounded_button/rounded_button'
-import Package from 'root/package.json'
+import CenteredView from 'storybook/stories/centered_view'
+import RoundedButton from 'app/components/rounded_button/rounded_button'
+import Package from 'package.json'
 
 export default storiesOf('Rounded Button')
   .add('with text', () => (
