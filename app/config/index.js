@@ -1,6 +1,10 @@
+// @flow
+
 import { Text } from 'react-native'
 import DebugConfig from 'app/config/debug_config'
 import AppConfig from 'app/config/app_config'
+
+declare var console: any
 
 export default () => {
   if (__DEV__) {

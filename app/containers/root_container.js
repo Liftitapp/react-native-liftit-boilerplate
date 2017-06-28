@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import { View, StatusBar } from 'react-native'
 import Navigation from 'app/navigation/app_navigation'

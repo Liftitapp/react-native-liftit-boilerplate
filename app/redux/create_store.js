@@ -1,3 +1,5 @@
+// @flow
+
 import { createStore, applyMiddleware, compose } from 'redux'
 import { autoRehydrate } from 'redux-persist'
 import Config from 'app/config/debug_config'
@@ -5,8 +7,10 @@ import createSagaMiddleware from 'redux-saga'
 import RehydrationServices from 'app/services/rehydration_services'
 import ReduxPersist from 'app/config/redux_persist'
 
+declare var console: any
+
 // creates the store
-export default (rootReducer, rootSaga) => {
+export default (rootReducer: Function, rootSaga: Function) => {
   /* ------------- Redux Configuration ------------- */
 
   const middleware = []

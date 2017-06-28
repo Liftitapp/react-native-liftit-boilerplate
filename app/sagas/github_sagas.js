@@ -1,9 +1,13 @@
+// @flow
+
 import { call, put } from 'redux-saga/effects'
 import { path } from 'ramda'
 import GithubActions from 'app/redux/github_redux'
+// Types
+import type GithubTypes from 'app/redux/github_redux'
+import type { ApiType } from 'app/services/api'
 
-export function * getUserAvatar (api, action) {
-  const { username } = action
+export function * getUserAvatar (api: ApiType, { username }: GithubTypes): Generator<any, any, any> {
   // make the call to the api
   const response = yield call(api.getUser, username)
 

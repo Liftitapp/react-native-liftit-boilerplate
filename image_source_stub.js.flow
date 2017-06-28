@@ -1,0 +1,5 @@
+const stub = {
+  uri: ''
+}
+
+export default stub

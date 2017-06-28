@@ -6,6 +6,8 @@ import RootContainer from 'app/containers/root_container'
 import createStore from 'app/redux'
 
 // create our store
+// @flow
+
 const store = createStore()
 
 /**

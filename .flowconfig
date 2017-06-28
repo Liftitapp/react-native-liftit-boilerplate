@@ -26,6 +26,7 @@ flow/
 
 [options]
 emoji=true
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/image_source_stub.js.flow'
 
 module.system=haste
 

@@ -6,13 +6,16 @@ import { Images } from 'app/themes'
 import RoundedButton from 'app/components/rounded_button'
 import Config from 'react-native-config'
 import I18n from 'app/i18n'
-// Types
-import type { LaunchPanelType } from 'app/types/launch_panel'
 
 // Styles
 import styles from 'app/components/launch_panel/launch_panel_styles'
 
-const launchPanel = (props: LaunchPanelType) => (
+// Types
+type _type= {
+  text: string
+}
+
+const launchPanel = (props: _type) => (
   <View style={styles.mainContainer}>
     <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
     <ScrollView style={styles.container}>

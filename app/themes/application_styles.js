@@ -1,3 +1,5 @@
+// @flow
+
 import Fonts from 'app/themes/fonts'
 import { Metrics } from 'app/themes/metrics'
 import Colors from 'app/themes/colors'

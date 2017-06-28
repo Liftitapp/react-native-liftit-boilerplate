@@ -1,8 +1,16 @@
+// @flow
+
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce'
 
+export type ApiType = {
+  getRoot: Function,
+  getRate: Function,
+  getUser: Function
+}
+
 // our "constructor"
-const create = (baseURL = 'https://api.github.com/') => {
+const create = (baseURL: string = 'https://api.github.com/') => {
   // ------
   // STEP 1
   // ------
@@ -36,7 +44,7 @@ const create = (baseURL = 'https://api.github.com/') => {
   //
   const getRoot = () => api.get('')
   const getRate = () => api.get('rate_limit')
-  const getUser = username => api.get('search/users', { q: username })
+  const getUser = (username: string) => api.get('search/users', { q: username })
 
   // ------
   // STEP 3
