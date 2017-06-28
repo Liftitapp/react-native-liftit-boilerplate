@@ -15,7 +15,7 @@ type _type= {
   text: string
 }
 
-const launchPanel = (props: _type) => (
+const launchPanel = ({ text }: _type) => (
   <View style={styles.mainContainer}>
     <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
     <ScrollView style={styles.container}>
@@ -25,7 +25,7 @@ const launchPanel = (props: _type) => (
 
       <View style={styles.section} >
         <Image source={Images.ready} />
-        <RoundedButton text={props.text} onPress={alertMessage} />
+        <RoundedButton text={text} onPress={alertMessage} />
         <Text style={styles.sectionText}>
           🔥reactnative-steroids-boilerplate🔥
         </Text>

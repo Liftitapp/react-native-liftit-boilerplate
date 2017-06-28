@@ -10,9 +10,9 @@ type _type = {
   onPress: Function
 }
 
-const roundedButton = (props: _type) => (
-  <TouchableOpacity style={styles.button} onPress={props.onPress}>
-    <Text style={styles.buttonText}>{props.text.toUpperCase()}</Text>
+const roundedButton = ({ text, onPress }: _type) => (
+  <TouchableOpacity style={styles.button} onPress={onPress}>
+    <Text style={styles.buttonText}>{text.toUpperCase()}</Text>
   </TouchableOpacity>
 )
 
