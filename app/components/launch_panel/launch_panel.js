@@ -1,16 +1,18 @@
-import React, { PropTypes } from 'react'
+// @flow
+
+import React from 'react'
 import { ScrollView, Text, Image, View, Alert } from 'react-native'
 import { Images } from 'app/themes'
 import RoundedButton from 'app/components/rounded_button'
 import Config from 'react-native-config'
 import I18n from 'app/i18n'
+// Types
+import type { LaunchPanelType } from 'app/types/launch_panel'
 
 // Styles
 import styles from 'app/components/launch_panel/launch_panel_styles'
 
-const launchPanel = ({
-  text
-}) => (
+const launchPanel = (props: LaunchPanelType) => (
   <View style={styles.mainContainer}>
     <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
     <ScrollView style={styles.container}>
@@ -20,7 +22,7 @@ const launchPanel = ({
 
       <View style={styles.section} >
         <Image source={Images.ready} />
-        <RoundedButton text={text} onPress={alertMessage} />
+        <RoundedButton text={props.text} onPress={alertMessage} />
         <Text style={styles.sectionText}>
           🔥reactnative-steroids-boilerplate🔥
         </Text>
@@ -49,10 +51,6 @@ const alertMessage = () => {
       { text: 'OK', onPress: () => console.log('OK Pressed') }
     ]
   )
-}
-
-launchPanel.propTypes = {
-  text: PropTypes.string
 }
 
 export default launchPanel
