@@ -11,11 +11,11 @@ import I18n from 'app/i18n'
 import styles from 'app/components/launch_panel/launch_panel_styles'
 
 // Types
-type _type= {
+type Props= {
   text: string
 }
 
-const launchPanel = ({ text }: _type) => (
+const launchPanel = ({ text }: Props) => (
   <View style={styles.mainContainer}>
     <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
     <ScrollView style={styles.container}>

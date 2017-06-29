@@ -2,7 +2,6 @@
 
 const colors = {
   background: '#1F0808',
-  backgroundColor: '#FFF',
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',
   transparent: 'rgba(0,0,0,0)',

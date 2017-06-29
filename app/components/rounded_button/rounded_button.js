@@ -5,12 +5,12 @@ import { TouchableOpacity, Text } from 'react-native'
 import styles from 'app/components/rounded_button/rounded_button_styles'
 
 // Types
-type _type = {
+type Props = {
   text: string,
   onPress: Function
 }
 
-const roundedButton = ({ text, onPress }: _type) => (
+const roundedButton = ({ text, onPress }: Props) => (
   <TouchableOpacity style={styles.button} onPress={onPress}>
     <Text style={styles.buttonText}>{text.toUpperCase()}</Text>
   </TouchableOpacity>
