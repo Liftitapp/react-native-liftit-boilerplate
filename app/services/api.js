@@ -2,6 +2,7 @@
 
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce'
+require('dotenv').config()
 
 export type ApiType = {
   getRoot: Function,
@@ -10,7 +11,7 @@ export type ApiType = {
 }
 
 // our "constructor"
-const create = (baseURL: string = 'https://api.github.com/') => {
+const create = (baseURL: string = process.env.GITHUB_API_URL) => {
   // ------
   // STEP 1
   // ------

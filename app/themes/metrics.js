@@ -4,8 +4,8 @@ import { Dimensions, Platform } from 'react-native'
 
 const { width, height } = Dimensions.get('window')
 
-const CalcScreenWidth = (_width: number = width, _height: number = height): number => _width < _height ? _width : _height
-const CalcScreenHeight = (_width: number = width, _height: number = height): number => _width < _height ? _height : _width
+const CalcScreenWidth = (localWidth: number = width, localHeight: number = height): number => localWidth < localHeight ? localWidth : localHeight
+const CalcScreenHeight = (localWidth: number = width, localHeight: number = height): number => localWidth < localHeight ? localHeight : localWidth
 const CalcNavBarHeight = (_Platform: Object = Platform): number => _Platform.OS === 'ios' ? 64 : 54
 
 // Used via Metrics.baseMargin
