@@ -26,8 +26,8 @@ flow/
 
 [options]
 emoji=true
-module.name_mapper.extension='png' -> '<PROJECT_ROOT>/image_source_stub.js.flow'
-module.name_mapper.extension='json' -> '<PROJECT_ROOT>/image_source_stub.js.flow'
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/assets_source_stub.js.flow'
+module.name_mapper.extension='json' -> '<PROJECT_ROOT>/assets_source_stub.js.flow'
 
 module.system=haste
 
