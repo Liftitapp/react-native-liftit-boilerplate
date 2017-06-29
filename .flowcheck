@@ -1,5 +1,6 @@
 {
   "include": [
-    "./app/**/*.js"
+    "app/**/*.js",
+    "!app/i18n/languages/*"
   ]
 }
