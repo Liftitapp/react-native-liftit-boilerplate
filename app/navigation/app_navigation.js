@@ -1,3 +1,5 @@
+// @flow
+
 import { StackNavigator } from 'react-navigation'
 import LaunchScreen from 'app/screens/launch_screen'
 

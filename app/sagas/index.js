@@ -1,3 +1,5 @@
+// @flow
+
 import { takeLatest } from 'redux-saga/effects'
 import API from 'app/services/api'
 import FixtureAPI from 'app/services/fixture_api'
@@ -19,7 +21,7 @@ const api = DebugConfig.useFixtures ? FixtureAPI : API.create()
 
 /* ------------- Connect Types To Sagas ------------- */
 
-export default function * root () {
+export default function * root (): Generator<any, any, any> {
   yield [
     // some sagas receive extra parameters in addition to an action
     takeLatest(GithubTypes.USER_REQUEST, getUserAvatar, api)

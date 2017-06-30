@@ -1,8 +1,12 @@
+// @flow
+
 import Config from 'app/config/debug_config'
 import Immutable from 'seamless-immutable'
 import Reactotron from 'reactotron-react-native'
 import { reactotronRedux as reduxPlugin } from 'reactotron-redux'
 import sagaPlugin from 'reactotron-redux-saga'
+
+declare var console: any
 
 if (Config.useReactotron) {
   // https://github.com/infinitered/reactotron for more options!

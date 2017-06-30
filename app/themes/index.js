@@ -1,3 +1,5 @@
+// @flow
+
 import Colors from 'app/themes/colors'
 import Fonts from 'app/themes/fonts'
 import { Metrics, CalcScreenWidth, CalcScreenHeight, CalcNavBarHeight } from 'app/themes/metrics'

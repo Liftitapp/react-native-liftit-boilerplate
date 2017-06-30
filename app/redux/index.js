@@ -1,3 +1,5 @@
+// @flow
+
 import { combineReducers } from 'redux'
 import configureStore from 'app/redux/create_store'
 import rootSaga from 'app/sagas/'

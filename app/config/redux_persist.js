@@ -1,3 +1,5 @@
+// @flow
+
 import immutablePersistenceTransform from 'app/services/immutable_persistence_transform'
 import { AsyncStorage } from 'react-native'
 

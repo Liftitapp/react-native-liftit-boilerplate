@@ -1,7 +1,11 @@
+// @flow
+
 import ReduxPersist from 'app/config/redux_persist'
 import { AsyncStorage } from 'react-native'
 import { persistStore } from 'redux-persist'
 import DebugConfig from 'app/config/debug_config'
+
+declare var console: any
 
 const updateReducers = (store: Object) => {
   const reducerVersion = ReduxPersist.reducerVersion

@@ -2,3 +2,4 @@ yarn.lock
 README.md
 node_modules
 coverage
+libdefs.js

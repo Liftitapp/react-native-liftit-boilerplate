@@ -1,6 +1,7 @@
 import API from 'app/services/api'
 import FixtureAPI from 'app/services/fixture_api'
 import R from 'ramda'
+require('dotenv').config()
 
 const realAPI = API.create()
 

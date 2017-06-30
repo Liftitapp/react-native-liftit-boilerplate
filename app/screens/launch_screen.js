@@ -1,7 +1,9 @@
-// Libs ========================================================================
+// @flow
+
+// Libs
 import React from 'react'
 
-// Components ==================================================================
+// Components
 import LaunchContainer from 'app/containers/launch_container'
 
 const LaunchScreen = () => (<LaunchContainer />)
