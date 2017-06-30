@@ -46,3 +46,6 @@ declare module 'reduxsauce' {
 declare module 'redux-saga/effects' {
   declare var exports: any
 }
+declare module 'dotenv' {
+  declare var exports: any
+}

@@ -10,8 +10,11 @@ export type ApiType = {
   getUser: Function
 }
 
+// TODO: fix the coverage of the next line
+const url = process.env.GITHUB_API_URL || ''
+
 // our "constructor"
-const create = (baseURL: string = process.env.GITHUB_API_URL) => {
+const create = (baseURL: string = url) => {
   // ------
   // STEP 1
   // ------
@@ -69,5 +72,6 @@ const create = (baseURL: string = process.env.GITHUB_API_URL) => {
 
 // let's return back our create method as the default.
 export default {
-  create
+  create,
+  url
 }
