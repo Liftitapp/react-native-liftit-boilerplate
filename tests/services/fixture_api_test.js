@@ -3,7 +3,7 @@ import FixtureAPI from 'app/services/fixture_api'
 import R from 'ramda'
 require('dotenv').config()
 
-const realAPI = API.create()
+const realAPI = API.create(process.env.GITHUB_API_URL)
 
 test('All fixtures map to actual API', () => {
   const fixtureKeys = R.keys(FixtureAPI).sort()
