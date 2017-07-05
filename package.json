@@ -29,8 +29,8 @@
     "git-hook": "npm test -s",
     "storybook": "adb reverse tcp:7007 tcp:7007 && storybook start -p 7007",
     "flow": "flowcheck",
-    "flow-restart": "flow stop && flow start && flowcheck",
-    "reactotron": "adb reverse tcp:9090 tcp:9090"
+    "flow:restart": "flow stop && flow start && flowcheck",
+    "reactotron:server": "adb reverse tcp:9090 tcp:9090"
   },
   "dependencies": {
     "apisauce": "^0.10.0",
