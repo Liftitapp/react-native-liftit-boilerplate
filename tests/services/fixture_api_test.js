@@ -7,7 +7,7 @@ const realAPI = API.create(process.env.GITHUB_API_URL)
 
 test('All fixtures map to actual API', () => {
   const fixtureKeys = R.keys(FixtureAPI).sort()
-  const apiKeys = R.keys(API.create())
+  const apiKeys = R.keys(API.create(process.env.GITHUB_API_URL))
 
   const intersection = R.intersection(fixtureKeys, apiKeys).sort()
 
@@ -54,6 +54,7 @@ test('FixtureAPI getUser returns the right file for skellock as default', () => 
 test('API Service expose three public methods and this returns a defined object', () => {
   const apiKeys = R.keys(realAPI)
   expect(apiKeys).toEqual(['getRoot', 'getRate', 'getUser'])
+  expect(realAPI).toBeDefined()
 
   expect(R.hasIn('getRoot', realAPI)).toEqual(true)
   expect(R.hasIn('getRate', realAPI)).toEqual(true)
