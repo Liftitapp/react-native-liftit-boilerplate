@@ -10,6 +10,8 @@ import I18n from 'app/i18n'
 // Styles
 import styles from 'app/components/launch_panel/launch_panel_styles'
 
+declare var console: any
+
 // Types
 type Props= {
   text: string
