@@ -90,7 +90,7 @@ android {
 
     defaultConfig {
         applicationId "com.reactnativeliftitboilerplate"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 22
         versionCode Integer.parseInt(project.env.get("APP_VERSION_CODE"))
         versionName project.env.get("APP_VERSION_NAME")
