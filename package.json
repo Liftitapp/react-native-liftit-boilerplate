@@ -44,6 +44,7 @@
     "react-native-device-info": "^0.10.0",
     "react-native-drawer": "^2.3.0",
     "react-native-i18n": "^1.0.0",
+    "react-native-newrelic": "^1.0.18",
     "react-native-sentry": "^0.14.0",
     "react-navigation": "^1.0.0-beta.7",
     "react-redux": "^5.0.2",

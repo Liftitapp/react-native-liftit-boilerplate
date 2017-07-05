@@ -10,6 +10,8 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.newrelic.agent.android.NewRelic;
+import com.wix.rnnewrelic.RNNewRelicPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,7 +30,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
           new RNSentryPackage(MainApplication.this),
           new ReactNativeConfigPackage(),
-          new ReactNativeI18n()
+          new ReactNativeI18n(),
+          new RNNewRelicPackage()
       );
     }
   };
@@ -41,6 +44,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+    NewRelic.withApplicationToken(BuildConfig.NEWRELIC_ANDROID_TOKEN).start(this);
     SoLoader.init(this, /* native exopackage */ false);
   }
 }

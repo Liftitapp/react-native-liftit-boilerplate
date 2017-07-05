@@ -52,3 +52,6 @@ declare module 'dotenv' {
 declare module 'react-native-sentry' {
   declare var exports: any
 }
+declare module 'react-native-newrelic' {
+  declare var exports: any
+}
