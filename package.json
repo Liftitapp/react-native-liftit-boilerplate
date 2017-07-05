@@ -29,7 +29,8 @@
     "git-hook": "npm test -s",
     "storybook": "adb reverse tcp:7007 tcp:7007 && storybook start -p 7007",
     "flow": "flowcheck",
-    "flow-restart": "flow stop && flow start && flowcheck"
+    "flow:restart": "flow stop && flow start && flowcheck",
+    "reactotron:server": "adb reverse tcp:9090 tcp:9090"
   },
   "dependencies": {
     "apisauce": "^0.10.0",
@@ -43,6 +44,7 @@
     "react-native-device-info": "^0.10.0",
     "react-native-drawer": "^2.3.0",
     "react-native-i18n": "^1.0.0",
+    "react-native-sentry": "^0.14.0",
     "react-navigation": "^1.0.0-beta.7",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",

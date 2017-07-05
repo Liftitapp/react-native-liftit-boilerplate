@@ -1,4 +1,4 @@
-import 'app/config'
+import AppConfig from 'app/config'
 import DebugConfig from 'app/config/debug_config'
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
@@ -8,6 +8,7 @@ import createStore from 'app/redux'
 // create our store
 // @flow
 
+AppConfig()
 const store = createStore()
 
 /**

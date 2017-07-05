@@ -10,6 +10,8 @@ import I18n from 'app/i18n'
 // Styles
 import styles from 'app/components/launch_panel/launch_panel_styles'
 
+declare var console: any
+
 // Types
 type Props= {
   text: string
@@ -49,9 +51,9 @@ const alertMessage = () => {
     'Alert Title',
     'My Alert Msg',
     [
-      { text: 'Ask me later', onPress: () => console.log('Ask me later pressed') },
-      { text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
-      { text: 'OK', onPress: () => console.log('OK Pressed') }
+      { text: 'Ask me later', onPress: () => console.tron.log('Ask me later pressed', true) },
+      { text: 'Cancel', onPress: () => console.tron.log('Cancel Pressed'), style: 'cancel' },
+      { text: 'OK', onPress: () => console.tron.log('OK Pressed') }
     ]
   )
 }

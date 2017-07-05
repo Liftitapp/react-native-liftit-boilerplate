@@ -3,6 +3,7 @@ package com.reactnativeliftitboilerplate;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.sentry.RNSentryPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.i18n.reactnativei18n.ReactNativeI18n;
 import com.facebook.react.ReactNativeHost;
@@ -25,8 +26,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new ReactNativeConfigPackage(),
-              new ReactNativeI18n()
+          new RNSentryPackage(MainApplication.this),
+          new ReactNativeConfigPackage(),
+          new ReactNativeI18n()
       );
     }
   };

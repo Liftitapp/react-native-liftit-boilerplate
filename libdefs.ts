@@ -49,3 +49,6 @@ declare module 'redux-saga/effects' {
 declare module 'dotenv' {
   declare var exports: any
 }
+declare module 'react-native-sentry' {
+  declare var exports: any
+}
