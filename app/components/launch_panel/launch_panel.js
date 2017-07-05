@@ -36,7 +36,7 @@ const launchPanel = ({ text }: Props) => (
           Código: { Config.APP_VERSION_CODE } - v{ Config.APP_VERSION_NAME }
         </Text>
         <Text style={styles.sectionText}>
-          Ejemplo i18n: { Images }
+          Ejemplo i18n: { I18n.t('greetings') }
         </Text>
       </View>
 
