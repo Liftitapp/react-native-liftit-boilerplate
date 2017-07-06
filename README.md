@@ -1,62 +1,155 @@
-#  ReactNativeLiftitBoilerplate
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+#  ReactNativeLiftitBoilerplate [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/) [![Build Status](https://semaphoreci.com/api/v1/liftit/react-native-liftit-boilerplate/branches/develop/shields_badge.svg)](https://semaphoreci.com/liftit/react-native-liftit-boilerplate) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3383bed845e84ecbafbdc8ba20e6c55e)](https://www.codacy.com/app/Liftit/react-native-liftit-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Liftitapp/react-native-liftit-boilerplate&amp;utm_campaign=Badge_Grade)
 
-* Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
+🔥reactnative-steroids-boilerplate🔥
 
-## :arrow_up: How to Setup
+Supported operating systems are >= Android 4.4 (API 19)
 
-**Step 1:** git clone this repo:
+## Setup
 
-**Step 2:** cd to the cloned repo:
+**Step 1:** `git clone https://github.com/Liftitapp/react-native-liftit-boilerplate.git`
 
-**Step 3:** Install the Application with `npm install`
+**Step 2:** `cd react-native-liftit-boilerplate && npm install`
+
+## Run app
+
+1. `cd react-native-liftit-boilerplate`
+2. Run Build for Android (iOS following soon)
+    * for Android
+      * Run your preffer Android emulator or connect your phone with the Debugging Mode enabled
+      * `react-native run-android`
 
 
-## :arrow_forward: How to Run App
+## Features
+* [Ignite](https://github.com/infinitered/ignite) - The project was generated with this tool
+* [DotEnv](https://www.npmjs.com/package/dotenv) - Environment vars for Javascript files. - [+ info](#dotenv)
+* [ReactNativeConfig](https://github.com/luggit/react-native-config) - Environment vars for React components and Android (*.xml, *.gradle, *.java) files. - [+ info](#react-native-config)
+* [ESLint](http://eslint.org) - Linter used on the project. - [+ info](#eslint)
+* [i18n](https://github.com/AlexanderZaytsev/react-native-i18n) - Support to i18n. - [+ info](#i18n)
+* [Jest](https://facebook.github.io/jest/) - Testing (with coverage). - [+ info](#jest)
+* [Codacy](https://www.codacy.com) - Code review an analytics. - [+ info](#codacy)
+* [Storybook](https://storybook.js.org) - Testing for React-Native UI components. - [+ info](#storybook)
+* [Flow](https://flow.org) - Type checker for Javascript (with flowcheck). - [+ info](#flow)
+* [Sentry](https://sentry.io/welcome/) - Realtime error tracking. - [+ info](#sentry)
+* [NewRelic](https://newrelic.com/mobile-monitoring) - App monitoring. - [+ info](#newrelic)
+* [Reactotron](https://github.com/infinitered/reactotron) - Debug tool for React Native apps. - [+ info](#reactotron)
 
-1. cd to the repo
-2. Run Build for either OS
-  * for iOS
-    * run `react-native run-ios`
-  * for Android
-    * Run Genymotion
-    * run `react-native run-android`
+## Configuration
+### **DOTENV**
+This module read the `.env` file from the root folder, and stores their variables on the `process.env` object.
 
-## :no_entry_sign: Standard Compliant
+#### How to use
+```
+require('dotenv').config()
+console.log(process.env.APP_VERSION_CODE)
+```
+Use this way to access to the env vars only outside from the react-native application (eg. On the tests folder, or on the gulp file)
+### **REACT-NATIVE-CONFIG**
+This module is used to to expose config variables to your javascript code inside the react-native application.
+#### How to use
+  Android
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-This project adheres to Standard.  Our CI enforces this, so we suggest you enable linting to keep your project compliant during development.
+  * **Java files** - Through the BuildConfig object.
+  ```
+  public HttpURLConnection getApiClient() {
+      URL url = new URL(BuildConfig.API_URL);
+      // ...
+  }
+  ```
 
-**To Lint on Commit**
+  * **Gradle configuration files** - Through the project.env.get() function.
+  ```
+  defaultConfig {
+      applicationId project.env.get("APP_ID")
+  }
+  ```
 
-This is implemented using [ghooks](https://github.com/gtramontina/ghooks). There is no additional setup needed.
+  * **XML configuration files** (eg. `AndroidManifest.xml`)- Through the @string annotation.
+  ```
+  <meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="@string/GOOGLE_MAPS_API_KEY" />
+  ```
+### **ESLINT**
+Linter used to check syntax errors on the code, it uses a config file called `.eslintrc` stored on the root folder.
 
-**Bypass Lint**
+The `.eslintignore` (also stored on the root folder) is used to ignore specific folders or files, like a .gitignore file 
+#### How to use
+**Run on the console:** `npm run superlint`
+### **I18N**
+Internationalization for the project. The languages are stored on `app/i18n/languages`, on `.json` files, and must be exported on `app/i18n/index.js` 
+#### How to use
+```
+import I18n from 'app/i18n'
+{ I18n.t('greetings') }
+```
+### **JEST**
+This project uses Jest for unit testing. The tests lives on `tests` folder
+#### How to use
+**Run on the console:** `npm run test`
 
-If you have to bypass lint for a special commit that you will come back and clean (pushing something to a branch etc.) then you can bypass git hooks with adding `--no-verify` to your commit command.
+It creates a Coverage folder, which tell you the percentage of your code which is tested and is used to report it to Codacy 
+### **CODACY**
+Codacy check code style, security, duplication, complexity and quality on every commit. You must integrate it with your repository.
 
-**Understanding Linting Errors**
+**Coverage** - To send to Codacy the coverage info created by Jest, there are a Gulp script (`gulpfile.js`) that use the "PROJECT_TOKEN" of your Codacy project. This "PROJECT_TOKEN" must be setted on your `.env` file like `CODACY_SECRET_TOKEN` 
 
-The linting rules are from JS Standard and React-Standard.  [Regular JS errors can be found with descriptions here](http://eslint.org/docs/rules/), while [React errors and descriptions can be found here](https://github.com/yannickcr/eslint-plugin-react).
+#### How to use
+**Run on the console:** `npm run gulp`
+
+(Coverage folder must exist)
+### **STORYBOOK**
+With this, you can test all your UI components on realtime.
+#### How to use
+* Run your preffer Android emulator or connect your phone with the Debugging Mode enabled
+* **Run on the console:** `npm run storybook`
+* Visit `localhost:7007` on your browser
+### **FLOW**
+It check the typed of all your Javascript code, and uses a config file called `.flowconfig` stored on the root folder.
+
+You must indicate which files want to be checked with the `@flow` annotation on top of your files.
+#### How to use
+**Run on the console:** `npm run flow`
+
+If you use VSCode editor, it's recommended install "Flow Language Support" extension. 
+### **SENTRY**
+This project is configurated to report all its errors on production to be tracked by Sentry.
+#### How to use
+On your `.env` file, must exist this vars, according to your Sentry project information:
+```
+SENTRY_DSN
+SENTRY_URL
+SENTRY_ORG
+SENTRY_PROJECT
+```
+On `app/config/index.js:18` is enabled the use of this system.
+### **NEWRELIC**
+This project is configurated to be monitored by New Relic.
+#### How to use
+On your `.env` file, must exist this var, according to your NewRelic project information:
+```
+NEWRELIC_ANDROID_TOKEN
+```
+On `app/config/index.js:19` is enabled the use of this system.
+### **REACTOTRON**
+The functionality of this app can be inspectioned by Reactotron.
+#### How to use
+* [Install Reactotron](https://github.com/infinitered/reactotron/blob/master/docs/installing.md)
+* Open the Reactotron app
+* Run your preffer Android emulator or connect your phone with the Debugging Mode enabled
+* **Run on the console:** `npm run reactotron:server`
 
 ## :closed_lock_with_key: Secrets
 
-This project uses [react-native-config](https://github.com/luggit/react-native-config) to expose config variables to your javascript code in React Native. You can store API keys
-and other sensitive information in a `.env` file:
+This project uses [react-native-config](#react-native-config) to expose config variables to your code in React Native app, and [dotenv](#dotenv) to expose them outside the React Native app. You must store API keys and other sensitive information in a `.env` file, on the root folder.
+
+The minimum vars required by this project are:
 
 ```
-API_URL=https://myapi.com
-GOOGLE_MAPS_API_KEY=abcdefgh
-```
-
-and access them from React Native like so:
-
-```
-import Secrets from 'react-native-config'
-
-Secrets.API_URL  // 'https://myapi.com'
-Secrets.GOOGLE_MAPS_API_KEY  // 'abcdefgh'
+APP_VERSION_CODE /*Version code of your Android app eg. 0.0.1*/
+APP_VERSION_NAME /*Version name of your Android app eg. v0.1-beta*/
+GITHUB_API_URL=https://api.github.com/
 ```
 
 The `.env` file is ignored by git keeping those secrets out of your repo.
 
+Made with ❤️ by Liftit - Developed by [David Quinto](https://github.com/davidquinto)
