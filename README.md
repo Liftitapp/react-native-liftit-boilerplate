@@ -6,32 +6,47 @@ Supported operating systems are >= Android 4.4 (API 19)
 
 ## Setup
 
-**Step 1:** `git clone https://github.com/Liftitapp/react-native-liftit-boilerplate.git`
+**Step 1:** `git clone https://github.com/Liftitapp/react-native-liftit-boilerplate.git <YourProjectName>`
 
-**Step 2:** `cd react-native-liftit-boilerplate && npm install`
+**Step 2:** `cd <YourProjectName> && npm install`
 
 ## Run app
 
-1. `cd react-native-liftit-boilerplate`
-2. Run Build for Android (iOS following soon)
+1. `cd <YourProjectName>`
+2. Create a `.env` file with the next vars:
+```
+APP_VERSION_CODE /*Version code of your Android app eg. 0.0.1*/
+APP_VERSION_NAME /*Version name of your Android app eg. v0.1-beta*/
+GITHUB_API_URL=https://api.github.com/
+```
+3. Run Build for Android (iOS following soon)
     * for Android
       * Run your preffer Android emulator or connect your phone with the Debugging Mode enabled
-      * `react-native run-android`
+      * `npm run start`
+      * On another console: `react-native run-android`
 
 
 ## Features
-* [Ignite](https://github.com/infinitered/ignite) - The project was generated with this tool
-* [DotEnv](https://www.npmjs.com/package/dotenv) - Environment vars for Javascript files. - [+ info](#dotenv)
-* [ReactNativeConfig](https://github.com/luggit/react-native-config) - Environment vars for React components and Android (*.xml, *.gradle, *.java) files. - [+ info](#react-native-config)
-* [ESLint](http://eslint.org) - Linter used on the project. - [+ info](#eslint)
-* [i18n](https://github.com/AlexanderZaytsev/react-native-i18n) - Support to i18n. - [+ info](#i18n)
-* [Jest](https://facebook.github.io/jest/) - Testing (with coverage). - [+ info](#jest)
-* [Codacy](https://www.codacy.com) - Code review an analytics. - [+ info](#codacy)
-* [Storybook](https://storybook.js.org) - Testing for React-Native UI components. - [+ info](#storybook)
-* [Flow](https://flow.org) - Type checker for Javascript (with flowcheck). - [+ info](#flow)
-* [Sentry](https://sentry.io/welcome/) - Realtime error tracking. - [+ info](#sentry)
-* [NewRelic](https://newrelic.com/mobile-monitoring) - App monitoring. - [+ info](#newrelic)
-* [Reactotron](https://github.com/infinitered/reactotron) - Debug tool for React Native apps. - [+ info](#reactotron)
+
+| Feature | Summary |
+| --- | --- |
+| [Ignite](https://github.com/infinitered/ignite) | The project was generated with this tool|
+| [DotEnv](https://www.npmjs.com/package/dotenv) | Environment vars for Javascript files. - [+ info](#dotenv)|
+| [ReactNativeConfig](https://github.com/luggit/react-native-config) | Environment vars for React components and Android (*.xml, *.gradle, *.java) files. - [+ info](#react-native-config) |
+| [ESLint](http://eslint.org) | Linter used on the project. - [+ info](#eslint)|
+| [i18n](https://github.com/AlexanderZaytsev/react-native-i18n) | Support to i18n. - [+ info](#i18n)|
+| [Jest](https://facebook.github.io/jest/) | Testing (with coverage). - [+ info](#jest)|
+| [Codacy](https://www.codacy.com) | Code review an analytics. - [+ info](#codacy)|
+| [Storybook](https://storybook.js.org) | Testing for React-Native UI components. - [+ info](#storybook)|
+| [Flow](https://flow.org) | Type checker for Javascript (with flowcheck). - [+ info](#flow)|
+| [Sentry](https://sentry.io/welcome/) | Realtime error tracking. - [+ info](#sentry)|
+| [NewRelic](https://newrelic.com/mobile-monitoring) | App monitoring. - [+ info](#newrelic)|
+| [Reactotron](https://github.com/infinitered/reactotron) | Debug tool for React Native apps. - [+ info](#reactotron) |
+| | |
+| [Redux](https://github.com/reactjs/react-redux) | A predictable state container - Helping you write applications that behave consistently and run in different environments. |
+| [Redux-saga](https://github.com/redux-saga/redux-saga) | Is a library that aims to make side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) in React/Redux applications easier and better. |
+| [Apisauce](https://github.com/skellock/apisauce) | Great form to communicate with APIs. |
+| [Gulp](http://gulpjs.com) | Toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something. |
 
 ## Configuration
 ### **DOTENV**
