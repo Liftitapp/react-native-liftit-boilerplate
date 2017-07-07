@@ -196,7 +196,7 @@ The `.env` file is ignored by git keeping those secrets out of your repository.
 Made with ❤️ by [Liftit](https://liftit.co) - Developed by [David Quinto](https://github.com/davidquinto)
 
 ## Missing work
-1. Improve the README.md of Sagas, Redux and Screens.
+1. Improve the README.md of Sagas, Redux, Storybooks and Screens.
 2. Change README's system to [GitHub Wiki](https://help.github.com/articles/about-github-wikis/).
 
 ## Contributing
