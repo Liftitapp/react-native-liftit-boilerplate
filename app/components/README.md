@@ -1,2 +1,2 @@
 ### Components Folder
-All components are stored and organized here
+All react components are stored and organized here
