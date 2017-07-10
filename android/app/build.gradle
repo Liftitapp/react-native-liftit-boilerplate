@@ -1,4 +1,6 @@
 apply plugin: "com.android.application"
+apply plugin: "newrelic"
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 import com.android.build.OutputFile
 
@@ -66,6 +68,7 @@ import com.android.build.OutputFile
  */
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-sentry/sentry.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -88,10 +91,10 @@ android {
 
     defaultConfig {
         applicationId "com.reactnativeliftitboilerplate"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
+        versionCode Integer.parseInt(project.env.get("APP_VERSION_CODE"))
+        versionName project.env.get("APP_VERSION_NAME")
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -126,7 +129,12 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-config')
+    compile project(':react-native-i18n')
+    compile project(':react-native-sentry')
     compile fileTree(dir: "libs", include: ["*.jar"])
+    compile project(":react-native-newrelic")
+    compile fileTree(dir: "node_modules/react-native-newrelic/android/libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
 }

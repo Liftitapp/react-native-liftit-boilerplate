@@ -1,4 +1,4 @@
-// Simple React Native specific changes
+// @flow
 
 export default {
   // font scaling override - RN default is on

@@ -1,3 +1,5 @@
+// @flow
+
 import R from 'ramda'
 import Immutable from 'seamless-immutable'
 
@@ -15,8 +17,7 @@ const toImmutable = raw => Immutable(raw)
 
 // the transform interface that redux-persist is expecting
 export default {
-  out: state => {
-    // console.log({ retrieving: state })
+  out: (state: Immutable) => {
     // --- HACKZORZ ---
     // Attach a empty-ass function to the object called `mergeDeep`.
     // This tricks redux-persist into just placing our Immutable object into the state tree
@@ -29,8 +30,7 @@ export default {
     state.mergeDeep = R.identity
     return toImmutable(state)
   },
-  in: raw => {
-    // console.log({ storing: raw })
+  in: (raw: Immutable) => {
     return fromImmutable(raw)
   }
 }
